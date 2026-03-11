@@ -522,15 +522,25 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  gap: 1rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px dashed var(--primary-light);
   padding-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .menu-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
 }
 
 .menu-item-header h4 {
   margin: 0;
   font-family: var(--font-sans);
   font-size: 1.25rem;
+  line-height: 1.4;
   color: var(--text-main);
   flex: 1;
 }
@@ -541,7 +551,12 @@ img {
   font-weight: 600;
   color: var(--primary);
   white-space: nowrap;
-  margin-left: 1rem;
+}
+
+@media (min-width: 481px) {
+  .price {
+    margin-left: 1rem;
+  }
 }
 
 .price small {
