@@ -732,7 +732,21 @@ img {
 
   .nav-links {
     display: none;
-    /* In a real app, implement a mobile menu toggle */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .mobile-menu-btn {
